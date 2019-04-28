@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 gray_img = cv2.imread('input.jpeg', cv2.IMREAD_GRAYSCALE)
-cv2.imshow('input',gray_img)
+cv2.imshow('lena image ',gray_img)
 hist = cv2.calcHist([gray_img],[0],None,[512],[0,256])
 plt.hist(gray_img.ravel(),512,[0,256])
 plt.title('Histogram for gray scale picture')
